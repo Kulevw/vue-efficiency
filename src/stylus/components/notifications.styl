@@ -1,0 +1,38 @@
+.notifications
+  position fixed
+  pointer-events none
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 2000
+
+  &__block
+    position absolute
+    top 15px
+    bottom 15px
+    left 15px
+    right 15px
+    display flex
+    flex-direction column
+
+    & > ul
+      position relative
+
+    &--left
+      align-items flex-start
+
+    &--middle
+      align-items center
+
+    &--right
+      align-items flex-end
+
+    &--top
+      justify-content flex-start
+
+    &--center
+      justify-content center
+
+    &--bottom
+      justify-content flex-end

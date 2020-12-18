@@ -1,0 +1,24 @@
+.t-top-to-bottom
+
+  &-enter-from
+    transform translateY(-100%)
+
+  &-enter-active
+    transition transform 2.2s
+
+  &-enter-to
+    transform translateY(0)
+    margin-bottom 0
+
+  &-leave-from
+    transform translateY(0)
+
+  &-leave-active
+    transition transform 2.2s
+    pointer-events none
+    overflow hidden
+
+  &-leave-to
+    transform translateY(-100%)
+    //transform translateY(50%)
+    //margin-top 100%

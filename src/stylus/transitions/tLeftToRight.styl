@@ -1,0 +1,19 @@
+.t-left-to-right
+
+  &-enter-from
+    transform translateX(-100%)
+
+  &-enter-active
+    transition transform .5s
+
+  &-enter-to
+    transform translateX(0)
+
+  &-leave-from
+    transform translateX(0)
+
+  &-leave-active
+    transition transform .5s
+
+  &-leave-to
+    transform translateX(100%)

@@ -1,0 +1,63 @@
+.ui-input
+  position relative
+  display flex
+  min-height 40px
+  border 2px solid var(--border)
+  background-color var(--bg)
+  font-size 16px
+  line-height 20px
+
+  &--disabled
+    background-color var(--border)
+    color var(--text-disabled)
+    opacity .6
+
+  &__inner
+    display flex
+    flex-grow 1
+
+  &-label
+    margin-bottom 3px
+    font-size 14px
+    line-height 20px
+    color var(--text-secondary)
+
+  &__input
+    box-sizing content-box
+    display block
+    border-radius 0
+    border none
+    min-width 0
+    flex-grow 1
+    color inherit
+    background-color inherit
+    padding-top 8px
+    padding-bottom 8px
+    padding-left 5px
+    padding-right 5px
+    text-align left
+    font-size inherit
+    line-height inherit
+    placeholder(var(--placeholder))
+
+    &:first-child
+      padding-left 8px
+    &:nth-last-child(2)
+      padding-right 8px
+
+    &:focus
+      box-shadow none
+      outline none
+
+  &__focus
+    display block
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    pointer-events none
+    z-index 2
+
+  &__input:focus ~ &__focus
+    box-shadow 0 0 0 2px var(--active)

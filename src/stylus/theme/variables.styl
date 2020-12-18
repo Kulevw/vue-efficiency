@@ -1,0 +1,44 @@
+theme-light-variables()
+  --bg #FFFFFF
+  --text #252525
+  --text-secondary #777777
+  --primary #1c1c1c
+  --primary-text #FFFFFF
+  --primary-border #FFFFFF
+  --active #1ac49a
+  --border #E0E0E0
+  --placeholder #a3a3a3
+  --text-disabled #646464
+
+  --focus-outline-1 var(--active)
+  --focus-outline-2 var(--active-outline)
+
+  --white #ececec
+  --black #252525
+
+theme-dark-variables()
+  --bg #353535
+  --text #ececec
+  --text-secondary #ababab
+  --primary #000000
+  --primary-text #ffffff
+  --primary-border #808080
+  --active #21ba93
+  --border #202020
+  --placeholder #646464
+  --text-disabled rgba(163, 163, 163, .6)
+
+  --focus-outline-1 var(--black)
+  --focus-outline-2 var(--active)
+
+:root
+  theme-light-variables()
+
+  @media (prefers-color-scheme: dark)
+    theme-dark-variables()
+
+.theme-light
+  theme-light-variables()
+
+.theme-dark
+  theme-dark-variables()

@@ -1,0 +1,105 @@
+.ui-select
+  cursor pointer
+
+  &-wrapper
+    display block
+
+  &__toggle
+    align-self center
+    margin-right 8px
+
+  &__input[type="submit"]
+    white-space normal
+    cursor pointer
+
+  &__input[type="text"]
+    width 0
+
+  &__input:not(&__input--opened)
+    opacity 0
+
+  &__input--opened ~ &__focus > &__value
+    display none
+
+  &__focus
+    display flex
+    min-width 0
+    max-width 100%
+
+  &__value
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+  &__placeholder
+    color var(--placeholder)
+
+  &__popover-content
+    top calc(100% - 2px)
+    border-color var(--active)
+    border-width 2px
+    border-style solid
+    z-index 110
+
+  &__selected-options-list
+    display flex
+    flex-wrap wrap
+    align-items flex-start
+    margin-right -5px
+
+  &__selected-option
+    display flex
+    align-items flex-start
+    font-size 12px
+    max-width 100%
+    border-style solid
+    border-width 2px
+    border-color var(--border)
+    padding 0 8px
+    min-height 25px
+    margin-right 5px
+    margin-top 5px
+
+    &-label
+      align-self center
+
+    &-remove
+      display flex
+      align-items center
+      justify-content center
+      margin-right -5px
+      margin-left 5px
+      margin-top 3px
+      width 15px
+      height 15px
+      flex-shrink 0
+
+      & > svg
+        display block
+        width 12.5px
+        height 12.5px
+
+  &__list
+    max-height 200px
+    overflow-y auto
+
+  &__item
+    padding-right 8px
+    padding-left 8px
+
+    &-checkmark
+      visibility hidden
+      float right
+      margin-top 1px
+      margin-left 2px
+      color var(--active)
+
+    &--arrow
+      background-color var(--active)
+      color var(--primary-text)
+
+    &--arrow &-checkmark
+      color inherit
+
+    &--selected &-checkmark
+      visibility visible

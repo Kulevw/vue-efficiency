@@ -1,0 +1,28 @@
+.ui-btn
+  background-color var(--primary)
+  display inline-flex
+  justify-content center
+  align-items center
+  color var(--primary-text)
+  border-width 2px
+  border-style solid
+  border-color var(--primary)
+  padding 10.5px 13px
+  line-height 20px
+  cursor pointer
+  letter-spacing 1px
+
+  &:focus
+    box-shadow 0 0 0 4px var(--active)
+
+  &:disabled
+    color var(--text-disabled)
+
+  &--outlined
+    background-color transparent
+    color var(--primary)
+
+  &--flat
+    background-color var(--primary-text)
+    color var(--primary)
+    border-color var(--primary-text)
